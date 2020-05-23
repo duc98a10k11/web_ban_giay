@@ -18,15 +18,15 @@
             <div class="row">
                 <div class="col-md-4">
                     <nav class="nav justify-content-center">
-                        <a class="nav-link disabled" style="color: white; " href="#">Hotline:19001234</a>
+                        <a class="nav-link disabled" style="color: white; " >Hotline:0972.898.888</a>
                     </nav>
                 </div>
                 <div class="col-md-4"></div>
                 <div class="col-md-4" style="color: white;">
                     <nav class="nav align-content-end">
-                        <a class="nav-link active" style="color: white; href=" login.html">Đăng nhập</a>
-                        <a class="nav-link" style="color: white; href=" #">Đăng ký</a>
-                        <a class="nav-link active" style="color: white; href=" #">Tài khoản</a>
+                        <a class="nav-link active" style="color: white;" href=" login.html">Đăng nhập</a>
+                        <a class="nav-link active" style="color: white;" href="/view/signUp.html">Đăng ký</a>
+                        <a class="nav-link active" style="color: white;"  href="account.html">Tài khoản</a>
                     </nav>
                 </div>
 
@@ -63,7 +63,7 @@
 
         </div>
         <div class="container">
-            <div class="row" >
+            <div class="row">
                 <div class="col-md-6">
                     <ul class="nav justify-content-xl-start">
                         <li class="nav-item">
@@ -74,6 +74,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="#">Nữ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Adidas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Nike</a>
                         </li>
                     </ul>
                 </div>
@@ -86,7 +92,7 @@
 
                                 <li class="active"> <span class="glyphicon glyphicon-shopping-cart"
                                         width="100px"></span> </a> </li>
-                                <li class="text-align text-center"><a href="cart.html">Shooping Cart</a></li>
+                                <li class="text-align text-center"><a href="cart.html">Giỏ hàng</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -94,7 +100,7 @@
             </div>
         </div>
         <!-- start slide -->
-        <div class="row" >
+        <div class="row">
             <div class="col-md-12">
                 <div id="carouselId" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -104,13 +110,16 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <img src="/images/gioithieu.webp" style="background-attachment: scroll;height:20% ;" alt="First slide">
+                            <img src="/images/gioithieu.webp" style="background-attachment: scroll;height:20% ;"
+                                alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img src="/images/banner_sandal.webp" style="background-attachment: scroll;height: 20%;" alt="Second slide">
+                            <img src="/images/banner_sandal.webp" style="background-attachment: scroll;height: 20%;"
+                                alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img src="/images/banner_hunter1.webp" style="background-attachment: scroll;height: 20%;" alt="Third slide">
+                            <img src="/images/banner_hunter1.webp" style="background-attachment: scroll;height: 20%;"
+                                alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
@@ -125,71 +134,157 @@
             </div>
         </div>
         <!-- end slide -->
-        <!--start hiển thị sản phẩm -->
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-4">
-                    <div class="img-thumbnail">
-                        <img src="/images/product/pro1.png" height="50%" alt="">
-                        <div class="figure-caption">
-                            <h3>giày thể thao hunter</h3>
-                            <p>200.000 vnd</p>
-                            <P>size: 41,42,43</P>
-                            <p>
-                                <!-- lấy id và thêm vào giỏ hàng -->
-                                <a href="cart.html" class="btn btn-danger">Thêm vào giỏ hàng</a>
-                                <a href="#sanpham" data-toggle="modal" class="btn btn-primary">Xem mô tả</a>
-                            </p>
-                        </div>
+        
+        <div class="row" style="margin-top: 10px;">
+            <!-- start lọc -->
+            <div class="col-md-2" style="margin-bottom: 10px;">
+                <h3>Lọc sản phẩm</h3>
+                <form action="filter_by_p" method="post" role="form">
+                    <div class="form-group">
+                        <label for="">Theo giá</label>
+                        <input type="text" name="min_price" id="" class="form-control" placeholder="nhập giá tối thiểu">
+                        <input type="text" name="max_price" id="" class="form-control" placeholder="nhập giá tối đa">
                     </div>
+                    <button type="submit" class="btn btn-info">Lọc theo giá</button>
+                </form>
+                <form action="filter_by_p" method="post" role="form">
+                    <div class="form-check">
+                        <label class="form-check-label" >Lọc theo thương hiệu</label>
+                      <p><input type="radio" class="form-check-input" name="thuonghieu" id="" value="Adidas" checked>Adidas</p>
+                      <p><input type="radio" class="form-check-input" name="thuonghieu" id="" value="Bitis" notchecked>Bitis</p>
+                      <p><input type="radio" class="form-check-input" name="thuonghieu" id="" value="Nike" notchecked>Nike</p>
 
+                    </div>
+                    <button type="submit" class="btn btn-info">Lọc theo thương hiệu</button>
+                </form>
+
+            </div>
+            <!-- end lọc -->
+            <!--start hiển thị sản phẩm -->
+            <div class="container">
+                <a href="#"><h3 style="color: black;">Giày thể thao</h3></a>
+                <div class="row">
+                    
+                    <div class="col-md-4">
+                        <div class="img-thumbnail">
+                            <img src="/images/product/pro1.png" height="50%" alt="">
+                            <div class="figure-caption">
+                                <h3>giày thể thao hunter</h3>
+                                <p>200.000 vnd</p>
+                                <P>size: 41,42,43</P>
+                                <p>
+                                    <!-- lấy id và thêm vào giỏ hàng -->
+                                    <a href="cart.html" class="btn btn-danger">Thêm vào giỏ hàng</a>
+                                    <a href="#sanpham" data-toggle="modal" class="btn btn-primary">Xem mô tả</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- hết 1sp -->
+                    <div class="col-md-4">
+                        <div class="img-thumbnail">
+                            <img src="/images/product/pro1.png" height="50%" alt="">
+                            <div class="figure-caption">
+                                <h3>giày thể thao hunter</h3>
+                                <p>200.000 vnd</p>
+                                <P>size: 41,42,43</P>
+                                <p>
+                                    <!-- lấy id và thêm vào giỏ hàng -->
+                                    <a href="cart.html" class="btn btn-danger">Thêm vào giỏ hàng</a>
+                                    <a href="#sanpham" data-toggle="modal" class="btn btn-primary">Xem mô tả</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- hết 1sp -->
+                    <div class="col-md-4">
+                        <div class="img-thumbnail">
+                            <img src="/images/product/pro1.png" height="50%" alt="">
+                            <div class="figure-caption">
+                                <h3>giày thể thao hunter</h3>
+                                <p>200.000 vnd</p>
+                                <P>size: 41,42,43</P>
+                                <p>
+                                    <!-- lấy id và thêm vào giỏ hàng -->
+                                    <a href="cart.html" class="btn btn-danger">Thêm vào giỏ hàng</a>
+                                    <a href="#sanpham" data-toggle="modal" class="btn btn-primary">Xem mô tả</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <!-- hết 1sp -->
-                <div class="col-md-4">
-                    <div class="img-thumbnail">
-                        <img src="/images/product/pro1.png" height="50%" alt="">
-                        <div class="figure-caption">
-                            <h3>giày thể thao hunter</h3>
-                            <p>200.000 vnd</p>
-                            <P>size: 41,42,43</P>
-                            <p>
-                                <!-- lấy id và thêm vào giỏ hàng -->
-                                <a href="cart.html" class="btn btn-danger">Thêm vào giỏ hàng</a>
-                                <a href="#sanpham" data-toggle="modal" class="btn btn-primary">Xem mô tả</a>
-                            </p>
+                <a href="#"><h3 style="color: black;">Giày nữ</h3></a>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="img-thumbnail">
+                            <img src="/images/product/pro1.png" height="50%" alt="">
+                            <div class="figure-caption">
+                                <h3>giày thể thao hunter</h3>
+                                <p>200.000 vnd</p>
+                                <P>size: 41,42,43</P>
+                                <p>
+                                    <!-- lấy id và thêm vào giỏ hàng -->
+                                    <a href="cart.html" class="btn btn-danger">Thêm vào giỏ hàng</a>
+                                    <a href="#sanpham" data-toggle="modal" class="btn btn-primary">Xem mô tả</a>
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
+                    <!-- hết 1 sản phẩm -->
+                    
+                    <div class="col-md-4">
+                        <div class="img-thumbnail">
+                            <img src="/images/product/pro1.png" height="50%" alt="">
+                            <div class="figure-caption">
+                                <h3>giày thể thao hunter</h3>
+                                <p>200.000 vnd</p>
+                                <P>size: 41,42,43</P>
+                                <p>
+                                    <!-- lấy id và thêm vào giỏ hàng -->
+                                    <a href="cart.html" class="btn btn-danger">Thêm vào giỏ hàng</a>
+                                    <a href="#sanpham" data-toggle="modal" class="btn btn-primary">Xem mô tả</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- hết 1sp -->
                 </div>
             </div>
+            <!--  end hiển thị sản phẩm -->
+
+
+
         </div>
-        <!--  end hiển thị sản phẩm -->
-    </div>
-    <!-- footer -->
-    <div id="footer" style="width: 100%; background: #4b4b4b; padding: 10px 0px; color: #fff;">
+        <!-- footer -->
+        <div id="footer" style="width: 100%; background: #4b4b4b; padding: 10px 0px; color: #fff;">
 
 
-        <div class="text-center">
-            <p>
-                &copy 2019 - <b>GIÀY DHCT </b> <br>
-                Email: dhct@gmail.com | Điện thoại hỗ trợ 24/7:&nbsp;<a href="tel:0971898455"
-                    style="color: #fff;">0972.898.888</a> <br>
-                Địa chỉ: Số 108 - Trần Phú - Hà Đông - Hà Nội
-            </p>
+            <div class="text-center">
+                <p>
+                    &copy 2019 - <b>GIÀY DHCT </b> <br>
+                    Email: dhct@gmail.com | Điện thoại hỗ trợ 24/7:&nbsp;<a href="tel:0971898455"
+                        style="color: #fff;">0972.898.888</a> <br>
+                    Địa chỉ: Số 108 - Trần Phú - Hà Đông - Hà Nội
+                </p>
+            </div>
+
         </div>
-
-    </div>
-    <!-- js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+        <!-- js -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

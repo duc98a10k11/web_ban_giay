@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/images/logo_dhct.png">
+</head>
+
+<body>
+    <div class="container">
+        <!-- nếu đã có hàng trong giỏ hàng thì hiện -->
+        <div class="row" style="margin-top: 30px;">
+            <h3><i class="fa fa-star" style="font-size: 24px; color: gold;" aria-hidden="true"></i>Giỏ hàng của bạn</h3>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Hình ảnh</th>
+                            <th>Tên</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Cập nhật số lượng</th>
+                            <th>Thành tiền</th>
+
+                            <th>Xóa</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- đếm số lượng thứ tự trong giỏ hàng -->
+                        <tr>
+                            <!-- số thứ tự  tự động tăng trong giỏ hàng-->
+                            <td scope="row"></td>
+                            <!-- hình ảnh -->
+                            <td>
+                                <img src="/images/hunterNam.png" width="100px" alt="">
+                            </td>
+                            <!-- tên -->
+                            <td></td>
+                            <!-- giá -->
+                            <td></td>
+                            <!-- số lượng -->
+                            <!-- cập nhật số lượng -->
+                            <form action="up_quantity" method="post">
+                                <!-- số lượng: chỗ value lấy số lượng của khách hàng -->
+                                <td>
+                                    <input type="number" name="quatity" min=1 id="" value="">
+                                </td>
+                                <td>
+                                    <!-- cập nhật số lượng -->
+                                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                                </td>
+                            </form>
+                            <!-- thành tiền -->
+                            <td>
+                                <!-- trả về kết quả = số lượng*giá -->
+                            </td>
+                            <!-- nút xóa -->
+                            <td>
+                                <a href=""
+                                    onclick="return confirm('Bạn có thực sự muốn xóa sản phẩm này khỏi giỏ hàng không');"
+                                    class="btn btn-danger">Xóa</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <a href="index.html" class="btn btn-primary">Tiếp tục mua sắm</a>
+            <a href="pay.html" style="margin-left: 15px;" class="btn btn-danger">Thanh toán</a>
+        </div>
+        <!-- hết hiển thị sản phẩm -->
+        <!-- nếu giỏ hàng trống -->
+        <h4 style="color:blue;">Giỏ hàng của bạn đang trống</h4>
+        <div class="row">
+            <a style="margin-left: 20px;" href="index.html" class="btn btn-primary">Tới trang mua sắm</a>
+        </div>
+        
+    </div>
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
