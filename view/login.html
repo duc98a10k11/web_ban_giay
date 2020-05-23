@@ -1,57 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="Content-Type" content="text/html"> -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Đăng nhập</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- <link rel="shortcut icon" href="/images/LG.png"> -->
-    <link rel="shortcut icon" href="/images/LG.png" type="images/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="shotrcut icon" href="/images/LG.png">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="all" >
-   
-		<!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
-		
-        <link rel="stylesheet" href="/css/myCSS.css" type="text/css" media="all">
-        
 </head>
+
 <body>
-    <div class="container" style="background-image: url('/images/b2.jpg');min-height: 500px;">
-        <div class="row" style="margin-top:90px;" >
-            <div class="col-md-4 col-md-push-4">
-                <form action="login" method="POST" role="form">
+    <div class="container" >
+        <div class="row" style="margin-top: 90px;" >
+            <div class="col-md-4"></div>
+            <div class="col-md-4 col-md-push-4" style="background-image: url('/images/b2.jpg'); min-height: 500px;">
+                <form action="login" method="post"  role="form">
                     <legend>Đăng nhập</legend>
                     <div class="form-group">
-                    <label for="">Tên đăng nhập</label>
-                    <input type="text" class="form-control" name="user_login" id=""  placeholder="Nhập tài khoản">
-                    <!-- <small id="emailHelpId" class="form-text text-muted">Help text</small> -->
+                        <label for="">Tên đăng nhập</label>
+                        <input type="text" class="form-control" name="user_login" id=""
+                            placeholder="nhập tên tài khoản">
                     </div>
                     <div class="form-group">
-                    <label for="">Mật khẩu</label>
-                    <input type="password" class="form-control" name="pass_login" id=""  placeholder="Nhập mật khẩu">
+                        <label for="">Mật khẩu</label>
+                        <input type="password" class="form-control" name="password_login" id=""
+                            placeholder="nhập mật khẩu">
                     </div>
-                    <div >
-                        <button type="submit" class="btn btn-primary">Đăng ký</button>
-                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                    <div style="text-align: center;">
+                        <button type="submit" style="width: 250px;height: 38px; background-color: #034ea1; border: none;color: aliceblue;">Đăng nhập</button>
+
                     </div>
-                    <!-- <button type="submit" class="btn btn-primary">Đăng ký</button>
-                    <button type="submit" class="btn btn-primary">Đăng nhập</button> -->
-                    <br><a href="https://www.facebook.com/" >Đăng nhập bằng facebook</a></br>
-                    <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" >Đăng nhập bằng  tài khoản google</a>
+                    <br><a href="https://www.facebook.com/">Đăng nhập bằng facebook</a></br>
+                    <a
+                        href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin">Đăng
+                        nhập bằng tài khoản google</a>
                 </form>
             </div>
+            <div class="col-md-4"></div>
         </div>
     </div>
-    <!-- <script src="/js/jquery-3.4.1.min.js"></script> -->
-    <!-- Bootstrap JavaScript -->
-    <!-- <script src="/js/bootstrap.min.js"></script> -->
-  
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-    
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
+
 </html>
