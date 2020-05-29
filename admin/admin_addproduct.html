@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm sản phẩm</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="shotrcut icon" href="/images/LG.png">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-7 ">
+                <div>
+                    <a href="admin_index.html" class="btn btn-danger" style="margin-bottom: 30px;">Trở về trang chủ</a>
+
+                </div>
+                <h3>Thêm sản phẩm</h3>
+                <form action="addproduct" method="post">
+                    <div class="form-group">
+                        <label for="">Mã sản phẩm</label>
+                        <input type="text" name="id_sp" id="" class="form-control" placeholder="Nhập mã sản phẩm">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Tên sản phẩm</label>
+                        <input type="text" name="ten_sp" id="" class="form-control" placeholder="Nhập tên sản phẩm">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Thêm ảnh</label>
+                        <input type="file" accept="image/*" onchange="loadFile(event)">
+                        <img id="output" width="50%" height="50%"/>
+                        <!-- js hiển thị file lên khi chọn -->
+                        <script>
+                            var loadFile = function (event) {
+                                var output = document.getElementById('output');
+                                output.src = URL.createObjectURL(event.target.files[0]);
+                                output.onload = function () {
+                                    URL.revokeObjectURL(output.src) // free memory
+                                }
+                            };
+                        </script>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="">Thêm ảnh</label>
+                        <img src="" alt="">
+                        <input type="file" class="form-control-file" name="images" id="" placeholder="Thêm ảnh vào đây"
+                            aria-describedby="fileHelpId">
+                        <small id="fileHelpId" class="form-text text-muted">Help text</small>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="">Giá sản phẩm</label>
+                        <input type="text" name="gia_sp" id="" type="number" class="form-control"
+                            placeholder="Nhập giá sản phẩm">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="">Size</label>
+                        <p>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                All size(30-43)
+                            </label>
+                        </p>
+                        <P>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                30
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                31
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                32
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                33
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                34
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                35
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                36
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                37
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                38
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                39
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                40
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                41
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                42
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" id="" value="checkedValue" checked>
+                                43
+                            </label>
+                        </P>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Thương hiệu</label>
+                        <select class="custom-select" name="thuonghieu" id="">
+
+                            <option selected value="Adidas">Adidas</option>
+                            <option value="Bitis">Bitis</option>
+                            <option value="Nike">Nike</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Mô tả</label>
+                        <textarea class="form-control" name="mota" placeholder="nhập mô tả"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+                        <button type="reset" class="btn btn-danger">Hủy</button>
+                    </div>
+                </form>
+                <!-- kiểm tra thêm thành công thì hiển thị thêm nút tiếp tục thêm và làm mới lại form -->
+                <button type="reset" class="btn btn-primary" style="margin-top: 30px;">Tiếp tục thêm</button>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
